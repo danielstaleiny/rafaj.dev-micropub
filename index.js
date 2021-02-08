@@ -1,3 +1,3 @@
-import server from './config.js'
+import * as server from './config.js'
 
 server()
