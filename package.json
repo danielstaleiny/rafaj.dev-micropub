@@ -1,0 +1,36 @@
+{
+  "name": "rafaj.dev-micropub",
+  "version": "1.0.0",
+  "description": "micropub server to post from anywhere to rafaj.dev",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielstaleiny/rafaj.dev-micropub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielstaleiny/rafaj.dev-micropub/issues"
+  },
+  "homepage": "https://github.com/danielstaleiny/rafaj.dev-micropub#readme",
+  "dependencies": {
+    "@indiekit/indiekit": "0.1.0-alpha.21",
+    "@indiekit/preset-jekyll": "0.1.0-alpha.21",
+    "@indiekit/store-github": "0.1.0-alpha.21",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "printWidth": 80
+  }
+}
