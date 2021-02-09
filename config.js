@@ -43,7 +43,8 @@ indiekit.set('publication.postTypes', [
 indiekit.set('publication.store', github)
 
 // Create a server
-const server = indiekit.server()
+export function run() {
+  return indiekit.server({ port: process.env.NODE_PORT || 4000 })
+}
 
 // Export server
-export default server

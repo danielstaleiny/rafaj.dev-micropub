@@ -1,3 +1,3 @@
-import * as server from './config.js'
+import { run } from './config.js'
 
-server()
+run()
