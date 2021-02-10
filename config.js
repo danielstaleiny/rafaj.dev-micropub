@@ -2,6 +2,9 @@ import { config } from 'dotenv'
 import { Indiekit } from '@indiekit/indiekit'
 import { JekyllPreset } from '@indiekit/preset-jekyll'
 import { GithubStore } from '@indiekit/store-github'
+// import { MicropubEndpoint } from '@indiekit/endpoint-micropub'
+import { MediaEndpoint } from '@indiekit/endpoint-media'
+
 config() // Get .env
 
 if (!process.env.TOKEN) {
@@ -28,18 +31,23 @@ const jekyll = new JekyllPreset()
 // Create a new indiekit instance
 const indiekit = new Indiekit()
 
+// const micropubEndpoint = new MicropubEndpoint()
+const mediaEndpoint = new MediaEndpoint()
+
+// indiekit.set('publication.endpoint', micropubEndpoint)
+indiekit.set('publication.mediaEndpoint', mediaEndpoint)
 indiekit.set('publication.me', 'https://rafaj.dev')
 indiekit.set('publication.preset', jekyll)
-indiekit.set('publication.postTypes', [
-  {
-    type: 'note',
-    name: 'Journal entry',
-    post: {
-      path: 'b/{​yyyy}-{MM}-{dd}-{​slug}.md',
-      url: 'b/{yyyy}-{MM}-{​slug}',
-    },
-  },
-])
+// indiekit.set('publication.postTypes', [
+//   {
+//     type: 'note',
+//     name: 'Journal entry',
+//     post: {
+//       path: 'b/{​yyyy}-{MM}-{dd}-{​slug}.md',
+//       url: 'b/{yyyy}-{MM}-{​slug}',
+//     },
+//   },
+// ])
 indiekit.set('publication.store', github)
 
 // Create a server
