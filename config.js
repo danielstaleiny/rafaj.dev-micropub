@@ -9,8 +9,8 @@ if (!process.env.TOKEN) {
   console.log('missing TOKEN .env key')
   process.exit(1)
 }
-if (!process.env.USER) {
-  console.log('missing USER .env key')
+if (!process.env.USERNAME) {
+  console.log('missing USERNAME .env key')
   process.exit(1)
 }
 if (!process.env.REPO) {
@@ -19,7 +19,7 @@ if (!process.env.REPO) {
 }
 
 const github = new GithubStore({
-  user: process.env.USER, // Your username on GitHub
+  user: process.env.USERNAME, // Your username on GitHub
   repo: process.env.REPO, // Repository files will be saved to
   branch: 'master', // Branch to publish to
   token: process.env.TOKEN, // GitHub personal access token
