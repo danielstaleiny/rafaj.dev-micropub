@@ -36,7 +36,7 @@ indiekit.set('publication.postTypes', [
     type: 'note',
     name: 'Journal entry',
     post: {
-      path: 'b/{​yyyy}-{MM}-{dd}-{​slug}.md',
+      path: 'src/b/{​yyyy}-{MM}-{dd}-{​slug}.md',
       url: 'b/{yyyy}-{MM}-{​slug}',
     },
   },
