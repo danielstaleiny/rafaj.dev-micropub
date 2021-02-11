@@ -30,17 +30,17 @@ const jekyll = new JekyllPreset()
 const indiekit = new Indiekit()
 
 indiekit.set('publication.me', 'https://rafaj.dev')
-indiekit.set('publication.preset', jekyll)
-// indiekit.set('publication.postTypes', [
-//   {
-//     type: 'note',
-//     name: 'Journal entry',
-//     post: {
-//       path: 'b/{​yyyy}-{MM}-{dd}-{​slug}.md',
-//       url: 'b/{yyyy}-{MM}-{​slug}',
-//     },
-//   },
-// ])
+// indiekit.set('publication.preset', jekyll)
+indiekit.set('publication.postTypes', [
+  {
+    type: 'note',
+    name: 'Journal entry',
+    post: {
+      path: 'b/{​yyyy}-{MM}-{dd}-{​slug}.md',
+      url: 'b/{yyyy}-{MM}-{​slug}',
+    },
+  },
+])
 indiekit.set('publication.store', github)
 
 // Create a server
