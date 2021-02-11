@@ -36,8 +36,8 @@ indiekit.set('publication.postTypes', [
     type: 'article',
     name: 'Article',
     post: {
-      path: 'src/b/{slug}.md',
-      url: 'b/{slug}',
+      path: 'src/b/{dd}-{slug}.md',
+      url: 'b/{dd}-{slug}',
     },
     media: {
       path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
