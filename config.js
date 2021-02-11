@@ -30,8 +30,19 @@ const jekyll = new JekyllPreset()
 const indiekit = new Indiekit()
 
 indiekit.set('publication.me', 'https://rafaj.dev')
-// indiekit.set('publication.preset', jekyll)
+indiekit.set('publication.preset', jekyll)
 indiekit.set('publication.postTypes', [
+  {
+    type: 'article',
+    name: 'Article',
+    post: {
+      path: 'src/b/{slug}.md',
+      url: 'b/{slug}',
+    },
+    media: {
+      path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
+    },
+  },
   {
     type: 'note',
     name: 'Journal entry',
