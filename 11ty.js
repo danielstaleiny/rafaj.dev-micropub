@@ -141,8 +141,13 @@ export const EleventyPreset = class {
     }
 
     properties = {
-      date: properties.published.substring(0, 10),
+      layout: 'blog.njk',
+      tags: ['blog', 'post'],
+      date: properties.published.substring(0, 10), // substring to take only published date
       ...(properties.name && { title: properties.name }),
+      ...(properties.summary && {
+        description: properties.summary || properties.name || '',
+      }),
       ...(properties.summary && { excerpt: properties.summary }),
       ...(properties.category && { category: properties.category }),
       ...(properties.start && { start: properties.start }),
