@@ -146,7 +146,7 @@ export const EleventyPreset = class {
 
     properties = {
       layout: 'blog.njk',
-      type: properties.type || '',
+      type: JSON.stringify(properties),
       date: properties.published.substring(0, 10), // substring to take only published date
       ...(properties.name && { title: properties.name }),
       ...(!properties.name &&
