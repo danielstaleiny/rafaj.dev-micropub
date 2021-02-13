@@ -28,7 +28,7 @@ export const EleventyPreset = class {
         type: 'note',
         name: 'Note',
         post: {
-          path: 'src/b/{yy}-{YY}-{MM}-{dd}-{fileSlug}-{slug}-{page.slug}.md',
+          path: 'src/b/{MM}-{dd}-{slug}.md',
           url: 'b/{yyyy}-{MM}-{dd}-{page.slug}',
         },
       },
