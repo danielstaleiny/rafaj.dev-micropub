@@ -141,7 +141,7 @@ export const EleventyPreset = class {
     }
 
     properties = {
-      date: properties.published,
+      date: properties.published.substring(0, 10),
       ...(properties.name && { title: properties.name }),
       ...(properties.summary && { excerpt: properties.summary }),
       ...(properties.category && { category: properties.category }),
