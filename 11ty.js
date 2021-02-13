@@ -146,7 +146,7 @@ export const EleventyPreset = class {
 
     properties = {
       layout: properties['post-type']
-        ? `${properties['post-type']}.njk`
+        ? `${properties['post-type'].toLowerCase()}.njk`
         : 'blog.njk',
       date: properties.published.substring(0, 10), // substring to take only published date
       ...(properties.name && { title: properties.name }),
