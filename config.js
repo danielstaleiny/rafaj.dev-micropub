@@ -1,6 +1,6 @@
 import { config } from 'dotenv'
 import { Indiekit } from '@indiekit/indiekit'
-import { JekyllPreset } from '@indiekit/preset-jekyll'
+import { EleventyPreset } from './11ty'
 import { GithubStore } from '@indiekit/store-github'
 
 config() // Get .env
@@ -25,33 +25,12 @@ const github = new GithubStore({
   token: process.env.TOKEN, // GitHub personal access token
 })
 
-const jekyll = new JekyllPreset()
+const eleventy = new EleventyPreset()
 // Create a new indiekit instance
 const indiekit = new Indiekit()
 
 indiekit.set('publication.me', 'https://rafaj.dev')
-indiekit.set('publication.preset', jekyll)
-indiekit.set('publication.postTypes', [
-  {
-    type: 'article',
-    name: 'Article',
-    post: {
-      path: 'src/b/{dd}-{slug}.md',
-      url: 'b/{dd}-{slug}',
-    },
-    media: {
-      path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
-    },
-  },
-  {
-    type: 'note',
-    name: 'Journal entry',
-    post: {
-      path: 'src/b/{​yyyy}-{MM}-{dd}-{​slug}.md',
-      url: 'b/{yyyy}-{MM}-{​slug}',
-    },
-  },
-])
+indiekit.set('publication.preset', eleventy)
 indiekit.set('publication.store', github)
 
 // Create a server
