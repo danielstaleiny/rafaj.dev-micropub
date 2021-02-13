@@ -17,8 +17,8 @@ export const EleventyPreset = class {
         type: 'article',
         name: 'Article',
         post: {
-          path: 'src/b/{YYYY}-{MM}-{dd}-{slug}.md',
-          url: 'b/{YYYY}-{MM}-{dd}-{slug}', // this is shown where I can find post as feedback
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
@@ -28,97 +28,97 @@ export const EleventyPreset = class {
         type: 'note',
         name: 'Note',
         post: {
-          path: 'src/b/{MM}-{dd}-{slug}.md',
-          url: 'b/{yyyy}-{MM}-{dd}-{page.slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'photo',
         name: 'Photo',
         post: {
-          path: '_photos/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'photos/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
         media: {
-          path: 'media/photos/{yyyy}/{MM}/{dd}/{filename}',
+          path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
         type: 'video',
         name: 'Video',
         post: {
-          path: '_videos/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'videos/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
         media: {
-          path: 'media/videos/{yyyy}/{MM}/{dd}/{filename}',
+          path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
         type: 'audio',
         name: 'Audio',
         post: {
-          path: '_audio/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'audio/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
         media: {
-          path: 'media/audio/{yyyy}/{MM}/{dd}/{filename}',
+          path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
         type: 'bookmark',
         name: 'Bookmark',
         post: {
-          path: '_bookmarks/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'bookmarks/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'checkin',
         name: 'Checkin',
         post: {
-          path: '_checkins/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'checkins/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'event',
         name: 'Event',
         post: {
-          path: '_events/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'events/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'rsvp',
         name: 'Reply with RSVP',
         post: {
-          path: '_replies/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'replies/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'reply',
         name: 'Reply',
         post: {
-          path: '_replies/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'replies/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'repost',
         name: 'Repost',
         post: {
-          path: '_reposts/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'reposts/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
       {
         type: 'like',
         name: 'Like',
         post: {
-          path: '_likes/{yyyy}-{MM}-{dd}-{slug}.md',
-          url: 'likes/{yyyy}/{MM}/{dd}/{slug}',
+          path: 'src/b/{slug}.md',
+          url: 'b/{slug}',
         },
       },
     ]
