@@ -22,6 +22,7 @@ export const EleventyPreset = class {
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
+          url: '_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
@@ -41,6 +42,7 @@ export const EleventyPreset = class {
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
+          url: '_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
@@ -52,6 +54,7 @@ export const EleventyPreset = class {
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
+          url: '_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
@@ -63,6 +66,7 @@ export const EleventyPreset = class {
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
+          url: '_img/{yyyy}-{MM}-{dd}-{filename}',
         },
       },
       {
