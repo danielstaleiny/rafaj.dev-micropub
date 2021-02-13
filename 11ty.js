@@ -18,7 +18,7 @@ export const EleventyPreset = class {
         name: 'Article',
         post: {
           path: 'src/b/{YYYY}-{MM}-{dd}-{slug}.md',
-          url: 'b/{YYYY}-{MM}-{dd}-{slug}',
+          url: 'b/{YYYY}-{MM}-{dd}-{slug}', // this is shown where I can find post as feedback
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
@@ -151,7 +151,11 @@ export const EleventyPreset = class {
       tags: [
         'blog',
         'post',
-        ...(properties.category ? properties.category : []),
+        ...(properties.category
+          ? Array.isArray(properties.category)
+            ? properties.category
+            : [properties.category]
+          : []),
       ],
       ...(properties.category && { category: properties.category }),
       ...(properties.start && { start: properties.start }),
