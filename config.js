@@ -1,6 +1,6 @@
 import { config } from 'dotenv'
 import { Indiekit } from '@indiekit/indiekit'
-import { EleventyPreset } from './11ty'
+import { EleventyPreset } from './11ty.js'
 import { GithubStore } from '@indiekit/store-github'
 
 config() // Get .env
