@@ -37,8 +37,8 @@ export const EleventyPreset = class {
         type: 'photo',
         name: 'Photo',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/p/{slug}.md',
+          url: 'p/{slug}',
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
@@ -49,8 +49,8 @@ export const EleventyPreset = class {
         type: 'video',
         name: 'Video',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/v/{slug}.md',
+          url: 'v/{slug}',
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
@@ -61,8 +61,8 @@ export const EleventyPreset = class {
         type: 'audio',
         name: 'Audio',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/audio/{slug}.md',
+          url: 'audio/{slug}',
         },
         media: {
           path: 'src/_img/{yyyy}-{MM}-{dd}-{filename}',
@@ -73,56 +73,56 @@ export const EleventyPreset = class {
         type: 'bookmark',
         name: 'Bookmark',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/bk/{slug}.md',
+          url: 'bk/{slug}',
         },
       },
       {
         type: 'checkin',
         name: 'Checkin',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/ck/{slug}.md',
+          url: 'ck/{slug}',
         },
       },
       {
         type: 'event',
         name: 'Event',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/evt/{slug}.md',
+          url: 'evt/{slug}',
         },
       },
       {
         type: 'rsvp',
         name: 'Reply with RSVP',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/rsvp/{slug}.md',
+          url: 'rsvp/{slug}',
         },
       },
       {
         type: 'reply',
         name: 'Reply',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/reply/{slug}.md',
+          url: 'reply/{slug}',
         },
       },
       {
         type: 'repost',
         name: 'Repost',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/r/{slug}.md',
+          url: 'r/{slug}',
         },
       },
       {
         type: 'like',
         name: 'Like',
         post: {
-          path: 'src/b/{slug}.md',
-          url: 'b/{slug}',
+          path: 'src/l/{slug}.md',
+          url: 'l/{slug}',
         },
       },
     ]
