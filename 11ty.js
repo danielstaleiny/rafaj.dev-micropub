@@ -162,8 +162,9 @@ export const EleventyPreset = class {
       }),
       ...(properties.summary && { excerpt: properties.summary }),
       tags: [
-        'blog',
-        'post',
+        ...(properties['post-type']
+          ? [properties['post-type'].toLowerCase()]
+          : []),
         ...(properties.category
           ? Array.isArray(properties.category)
             ? properties.category
