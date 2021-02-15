@@ -180,18 +180,18 @@ export const EleventyPreset = class {
       ...(properties.photo && { photo: properties.photo }),
       ...(properties.video && { video: properties.video }),
       ...(properties['bookmark-of'] && {
-        'bookmark-of': properties['bookmark-of'],
+        bookmarkof: properties['bookmark-of'],
       }),
-      ...(properties['like-of'] && { 'bookmark-of': properties['like-of'] }),
-      ...(properties['repost-of'] && { 'repost-of': properties['repost-of'] }),
+      ...(properties['like-of'] && { bookmarkof: properties['like-of'] }),
+      ...(properties['repost-of'] && { repostof: properties['repost-of'] }),
       ...(properties['in-reply-to'] && {
-        'in-reply-to': properties['in-reply-to'],
+        inreplyto: properties['in-reply-to'],
       }),
       ...(properties['post-status'] === 'draft' && { draft: true }),
       ...(properties.visibility && { visibility: properties.visibility }),
       ...(properties.syndication && { syndication: properties.syndication }),
       ...(properties['mp-syndicate-to'] && {
-        'mp-syndicate-to': properties['mp-syndicate-to'],
+        mpsyndicateto: properties['mp-syndicate-to'],
       }),
     }
     let frontmatter = YAML.stringify(properties)
