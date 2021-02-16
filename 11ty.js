@@ -1,5 +1,10 @@
 import YAML from 'yaml'
 
+const genTeaserTitle = (txt) => {
+  const num = 25 //chars
+  return txt.length > num ? txt.substring(0, 25) + '..' : txt
+}
+
 export const EleventyPreset = class {
   constructor() {
     this.id = '11ty'
@@ -152,10 +157,11 @@ export const EleventyPreset = class {
       ...(properties.name && { title: properties.name }),
       ...(!properties.name &&
         properties.content && {
-          title: `${(properties.content.text
-            ? properties.content.text
-            : properties.content
-          ).substring(0, 25)}...`,
+          title: genTeaserTitle(
+            properties.content.text
+              ? properties.content.text
+              : properties.content
+          ),
         }),
       ...(properties.summary && {
         description: properties.summary || properties.name || '',
