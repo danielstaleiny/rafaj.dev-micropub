@@ -159,14 +159,6 @@ export const EleventyPreset = class {
         : 'notype',
       date: properties.published.substring(0, 10), // substring to take only published date
       ...(properties.name && { title: properties.name }),
-      ...(!properties.name &&
-        properties.content && {
-          title: genTeaserTitle(
-            properties.content.text
-              ? properties.content.text
-              : properties.content
-          ),
-        }),
       ...(properties.summary && {
         description: properties.summary || properties.name || '',
       }),
