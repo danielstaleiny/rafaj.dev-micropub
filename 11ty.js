@@ -167,13 +167,14 @@ export const EleventyPreset = class {
         ...(properties['post-type']
           ? [properties['post-type'].toLowerCase()]
           : []),
-        ...(properties.category
+        ...(properties.category && properties.category !== ''
           ? Array.isArray(properties.category)
             ? properties.category
             : [properties.category]
           : []),
       ],
-      ...(properties.category && { category: properties.category }),
+      ...(properties.category &&
+        properties.category !== '' && { category: properties.category }),
       ...(properties.start && { start: properties.start }),
       ...(properties.end && { end: properties.end }),
       ...(properties.rsvp && { rsvp: properties.rsvp }),
