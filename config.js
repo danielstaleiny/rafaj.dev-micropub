@@ -1,9 +1,7 @@
-import { config } from 'dotenv'
+import 'dotenv/config.js'
 import { Indiekit } from '@indiekit/indiekit'
 import { EleventyPreset } from './11ty.js'
 import { GithubStore } from '@indiekit/store-github'
-
-config() // Get .env
 
 if (!process.env.TOKEN) {
   console.log('missing TOKEN .env key')
