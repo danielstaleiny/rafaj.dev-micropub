@@ -1,9 +1,6 @@
 import YAML from 'yaml'
 
-const genTeaserTitle = (txt) => {
-  const num = 25 //chars
-  return txt.length > num ? txt.substring(0, 25) + '..' : txt
-}
+YAML.scalarOptions.str.fold.lineWidth = 0
 
 export const EleventyPreset = class {
   constructor() {
